@@ -18,6 +18,7 @@ read -p "C++ Standard (Default - gnu++99): " CXX_STANDARD && CXX_STANDARD=${CXX_
 read -p "Project ingress point (Default - main.cpp): " INGRESS_POINT && INGRESS_POINT=${INGRESS_POINT:-main.cpp}
 
 mkdir ${PWD}/src
+mkdir ${PWD}/include
 mkdir ${PWD}/out
 touch ${PWD}/${INGRESS_POINT}
 
