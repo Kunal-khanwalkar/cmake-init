@@ -17,12 +17,12 @@ read -p "CMake version (Default - 3.0.0): " CMAKE_VERSION && CMAKE_VERSION=${CMA
 read -p "C++ Standard (Default - gnu++99): " CXX_STANDARD && CXX_STANDARD=${CXX_STANDARD:-99}
 read -p "Project ingress point (Default - main.cpp): " INGRESS_POINT && INGRESS_POINT=${INGRESS_POINT:-main.cpp}
 
-mkdir -p src
-mkdir -p out
-touch ${INGRESS_POINT}
+mkdir ${PWD}/src
+mkdir ${PWD}/out
+touch ${PWD}/${INGRESS_POINT}
 
 # Creating your CMakeLists.txt
-cat << EOF > CMakeLists.txt
+cat << EOF > ${PWD}/CMakeLists.txt
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 
 project(${PROJECT_NAME})
@@ -37,7 +37,7 @@ EOF
 echo "\nCMakeLists.txt generated!"
 
 # gitignore for ignoring the CMake generated files
-cat << EOF > .gitignore
+cat << EOF > ${PWD}/.gitignore
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
