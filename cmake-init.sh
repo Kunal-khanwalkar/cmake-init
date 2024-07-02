@@ -14,7 +14,7 @@ echo "Let's initialize your CMake project!\n"
 
 read -p "Project name: " PROJECT_NAME && PROJECT_NAME=$(echo "${PROJECT_NAME}" | tr ' ' '-')
 read -p "CMake version (Default - 3.0.0): " CMAKE_VERSION && CMAKE_VERSION=${CMAKE_VERSION:-3.0.0}
-read -p "C++ Standard (Default - gnu++99): " CXX_STANDARD && CXX_STANDARD=${CXX_STANDARD:-99}
+read -p "C++ Standard (Default - gnu++98): " CXX_STANDARD && CXX_STANDARD=${CXX_STANDARD:-98}
 read -p "Project ingress point (Default - main.cpp): " INGRESS_POINT && INGRESS_POINT=${INGRESS_POINT:-main.cpp}
 
 mkdir ${PWD}/src
